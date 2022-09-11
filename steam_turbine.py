@@ -1,6 +1,5 @@
 import pyromat as pm
 from pprint import pprint
-
 """
 print(pm.config) # currently using units
 
@@ -18,7 +17,6 @@ list of all units:
            mass : mg kg g oz lb lbm slug 
            time : s ms min hr ns year day us 
 """
-
 pm.config['unit_pressure'] = 'kPa'
 pm.config['unit_temperature'] = 'C'
 
@@ -78,7 +76,6 @@ def TURBINE(p_outlet,p_inlet,T_inlet,working_fluid,eta_isentropic=1,eff_mech=1,e
            'eta':eta_turbine[0]}
     
     return res
-
 #%%
 working_fluid = 'mp.H2O'
 p_outlet = 1000
@@ -90,17 +87,4 @@ turbine = TURBINE(p_outlet,p_inlet,T_inlet,working_fluid,eta_isentropic=0.9,eff_
 
 decimals = 3
 turbine = {key : round(turbine[key], decimals) for key in turbine}
-
 pprint(turbine)
-
-
-
-
-
-
-
-
-
-
-
-
