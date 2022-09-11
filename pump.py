@@ -96,6 +96,6 @@ p2 = 2000
 pump = PUMP(p_inlet = p1,p_outlet = p2, working_fluid = 'mp.H2O', eta_isentropic = 0.9, T0=T0, p0=p0)
 
 decimals = 3
-boiler = {key : round(pump[key], decimals) for key in pump}
+pump = {key : round(pump[key], decimals) for key in pump}
 
-pprint(boiler)
+pprint(pump)
